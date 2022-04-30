@@ -1,0 +1,40 @@
+/******************************************************************************
+80) (MÉDIO) Ler um vetor Q de 20 posições (aceitar somente números positivos). 
+    Escrever a seguir o valor do maior elemento de Q 
+    e a respectiva posição que ele ocupa no vetor.
+*******************************************************************************/
+#include <stdio.h>
+int main()
+{
+    int tamanho = 3;
+    int Q[tamanho], i, maior=0, posicao;
+    
+    // Entrada: Ler um vetor Q de 20 posições 
+    for (i=0; i<tamanho; i++) {
+        printf("Digite um numero Q[%d]:", i);
+        scanf ("%d", &Q[i]);
+
+        // Aceitar somente números positivos
+        while (Q[i] < 0 ){
+            printf ("\nDigite somente valores positivos !!!");
+            scanf ("%d", &Q[i]);
+        }
+    }    
+    
+    // Processamento: descobrir quem e o maior e sua posicao
+    maior = Q[0];
+    posicao = 0;
+    for (i=0; i<tamanho; i++) {
+        if ( Q[i] > maior) {
+            maior = Q[i];
+            posicao = i;
+        }
+    }    
+    
+    // Saída:  o valor do maior elemento de Q e sua posicao no vetor
+    printf ("\nO maior elemento do vetor e: %d", maior);
+    printf ("\nA posicao desse elemento e: %d", posicao);
+    
+    return 0;
+}
+
