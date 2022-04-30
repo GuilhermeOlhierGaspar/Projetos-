@@ -1,0 +1,45 @@
+/******************************************************************************
+91) (COMPLEXO) Faça um algoritmo para ler 50 números 
+    e armazenar em um vetor VET.
+    Verificar e escrever se existem números repetidos no vetor VET
+    e em que posições se encontram.
+    
+    (Supor que exista no maximo 1 repeticao de cada numero)
+    
+    versao 1.0
+    
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+   // Entrada: 50 numeros que serao armazenados em um vetor 
+    int tamanhoVetor = 10;
+    int v[tamanhoVetor], i, j, busca;
+    
+    // Entrada: Ler um vetor v de 50 posições 
+    for (i=0; i<tamanhoVetor; i++) {
+        printf("Digite um numero v[%d]:", i);
+        scanf ("%d", &v[i]);
+    }
+   
+   // Processamento: montar uma lista com os nros repetidos e suas posicoes
+   // Saida: quais numeros estao repetidos no vetor e em quais posicoes
+
+    for (i=0; i< tamanhoVetor; i++) {
+        
+        busca = v[i];
+       // printf ("\n\nVou buscar duplicidade do elemento %d", busca);
+        
+        // laco para buscar o elemento 
+        for (j=i+1; j< tamanhoVetor; j++) {
+            if (busca == v[j]) {
+                printf ("\nElemento duplicado ! %d na posicao %d", busca, j);
+            }
+        }    
+    }
+   
+    return 0;
+}
+
+
