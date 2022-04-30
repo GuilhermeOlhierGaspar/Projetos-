@@ -1,0 +1,32 @@
+/******************************************************************************
+
+01. Calculo de quantidade de dias de uma idade em anos
+Autor: Guilherme Gaspar 09/02/2022
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+  
+   // Variáveis 
+        int dias=0, idadeAnos;
+   
+   // Entrada   
+   
+   printf ("Qual a sua idade em anos? ");
+   scanf("%d",&idadeAnos);
+   
+   // Processamento
+ 
+  while (idadeAnos < 0){
+         printf("\nIdade não pode ser negativa, digite novamente: ");
+         scanf("%d",&idadeAnos);
+  }
+         dias = idadeAnos * 365;
+   
+   // Saída
+ 
+  printf ("\nA quantidade de dias é: %d", dias);
+   return 0;
+}
